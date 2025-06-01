@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.container {
+  margin-top: 100px;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 18px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+#moonInfo {
+  margin-top: 20px;
+  font-size: 22px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+.moon-image {
+  width: 400px; 
+  margin-top: 15px;
+  border-radius: 50%;
+  box-shadow: 0 0 30px white;
+  animation: glow 3s ease-in-out infinite, rotate 60s linear infinite;
+  transition: transform 0.3s ease;
+}
+
+.moon-image:hover {
+  transform: scale(1.1) rotate(15deg);
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 30px white;
+  }
+  50% {
+    box-shadow: 0 0 60px #aaddff; 
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
